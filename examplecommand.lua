@@ -6,7 +6,7 @@ end
 
 
 --[[
-	syntax: <command name>,<callback>
+	syntax: <command name>,<description>,<callback>
 	the callback gets two arguments: message and args
 
 	message is the full message object(needed to reply and delete etc)
@@ -21,4 +21,4 @@ end
 
 
 
-addCommand("foo",fizz)
+addCommand("foo","a dummy command",fizz)
