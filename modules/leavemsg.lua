@@ -4,7 +4,7 @@ local function memberLeft(mem)
 
 	local g = client:getGuild(guild)
 
-	g:getChannel("217820359750057985"):send(s:format(mem.mentionString,mem.user.name,(mem.nickname and mem.nickname or mem.name)))
+	g:getChannel("217820359750057985"):send(leaveMsg:format(mem.mentionString,mem.user.name,(mem.nickname and mem.nickname or mem.name)))
 end
 
 if leaveHook then
