@@ -1,9 +1,9 @@
-discordia = require('discordia')-- all of the discord api
-fs = require('fs')-- fs.readFileSync, fs.writeFileSync
+discordia = require("discordia")-- all of the discord api
+fs = require("fs")-- fs.readFileSync, fs.writeFileSync
 
 client = discordia.Client()-- the main client container for discordia
 
-key = fs.readFileSync('key.txt','r')-- retrieve the key for the bot
+key = fs.readFileSync("key.txt","r")-- retrieve the key for the bot
 
 commandPrefix = "!"
 
@@ -23,7 +23,7 @@ end
 
 
 
-local cmdList = io.popen('ls commands/')-- get a list of all files in commands/
+local cmdList = io.popen("ls commands/")-- get a list of all files in commands/
 
 for script in cmdList:lines() do -- iterate over list and load each script
 	local func,err = loadfile("commands/"..script)-- check for syntax errors
@@ -55,7 +55,7 @@ end
 client:on("messageCreate",parseMessage)
 
 
-local modules = io.popen('ls modules/')-- get a list of all files in commands/
+local modules = io.popen("ls modules/")-- get a list of all files in commands/
 
 for script in modules:lines() do -- iterate over list and load each script
 	local func,err = loadfile("modules/"..script)-- check for syntax errors

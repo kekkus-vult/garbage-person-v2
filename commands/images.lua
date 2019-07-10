@@ -1,4 +1,4 @@
-local json = require('json')-- json.encode, json.decode
+local json = require("json")-- json.encode, json.decode
 
 local images = json.decode(fs.readFileSync("data/images.json"))
 

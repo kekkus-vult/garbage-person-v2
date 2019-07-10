@@ -1,4 +1,4 @@
-local url = require('querystring')
+local url = require("querystring")
 local templates = {
 	["rollsafe"] = "rollsafe",
 	["aliens"] = "aag",

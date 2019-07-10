@@ -32,8 +32,8 @@ local function dict(m,args)
 
 		if not body[2].fl then return m:reply("Uh, what?") end
 
-		local desc = m.content:sub(9).."("..body[2]['fl'].."):\n"
-		for k,v in pairs(body[1]['shortdef']) do
+		local desc = m.content:sub(9).."("..body[2]["fl"].."):\n"
+		for k,v in pairs(body[1]["shortdef"]) do
 			desc = desc..k..": "..v.."\n\n"
 		end
 

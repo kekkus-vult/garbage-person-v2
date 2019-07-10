@@ -54,13 +54,13 @@ local function reactUncache(chan,mid,hash,uid)
 	local msg = chan:getMessage(mid)
 	if not msg then return end
 	for re in msg.reactions:iter() do
-		if re.emojiName == '📌' then
+		if re.emojiName == "📌" then
 			ref = re
 			break
 		end
 	end
 
-	if msg.channel.id ~= pinChannel and hash == '📌' and ref.count <= 1 then
+	if msg.channel.id ~= pinChannel and hash == "📌" and ref.count <= 1 then
 		react(ref,uid)
 	end
 end

@@ -15,7 +15,7 @@ end
 local function reloadCmd(msg,args)
 
 	local cmdName = args:match("%w+")
-	local cmdList = io.popen('ls commands/')
+	local cmdList = io.popen("ls commands/")
 	for command in cmdList:lines() do
 		if command == cmdName..".lua" then
 			tryLoad(command,msg)

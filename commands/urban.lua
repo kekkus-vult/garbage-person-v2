@@ -22,8 +22,8 @@ local function urban (m,args)
 		local rep = {}
 		body = json.decode(body)
 
-		rep.title = body['list'][1].word
-		rep.description = body['list'][1].word..": \n"..body['list'][1].definition.."\n\n Example:\n *"..body['list'][1].example.."*"
+		rep.title = body["list"][1].word
+		rep.description = body["list"][1].word..": \n"..body["list"][1].definition.."\n\n Example:\n *"..body["list"][1].example.."*"
 
 		m:reply({embed = rep})
 	end)()
