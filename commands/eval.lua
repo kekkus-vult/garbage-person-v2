@@ -1,6 +1,6 @@
 local function eval(msg,args)
 
-	if msg.author ~= client.owner then reutrn end
+	if msg.author ~= client.owner then return end
 	local env = getfenv()
 	env.m = m
 	env.send = function(...)
