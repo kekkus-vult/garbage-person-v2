@@ -15,7 +15,7 @@ local function eval(msg,args)
 		m:reply(table.concat(t,"\t"))
 	end
 
-	local fn,err = load(code,"Eval","t",env)
+	local fn,err = load(args,"Eval","t",env)
 	if not fn then
 		m:reply("There was a syntax error: ```lua\n"..err.."```")
 		return
