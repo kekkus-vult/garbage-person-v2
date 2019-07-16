@@ -5,12 +5,8 @@ local function eval(msg,args)
 	env.m = msg
 	env.send = function(...)
 		local t = {}
-		if #{...} == 0 then 
-			t = {"nil"}
-		else
-			for k,v in pairs({...}) do
-				table.insert(t,tostring(v))
-			end
+		for i = 1,select("#",...) do
+			table.insert(t,tostring(select(i,...)))
 		end
 		msg:reply(table.concat(t,"\t"))
 	end
