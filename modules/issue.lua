@@ -19,7 +19,6 @@ local function getIssue(str)
 	if not num then
 		return {content="Couldn't find that issue, are you sure you typed it right?"}
 	end
-	print(url:format(num))
 	local res,dat = http.request("GET",url:format(num))
 	if res.code ~= 200 then
 		return {content = "There was some kind of error getting that report(HTTP Error: "..res.code..")"}
