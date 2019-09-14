@@ -14,6 +14,29 @@ for catagory,dat in pairs(reactDat) do
 	end
 end
 
+
+local function sortedKeys(tablein)
+
+	local keys = {}
+	for key in pairs(tablein) do
+		table.insert(keys,key)
+	end
+	table.sort(keys,function(a,b) return a>b end)
+
+	local i = 0
+	local iter = function()
+		i = i + 1
+		if keys[i] == nil then
+			return
+		else
+			return keys[i],tablein[keys[i]]
+		end
+
+	end
+
+	return iter
+end
+
 local function onMessage(m)
 
 	if m.author == client.user then return end
@@ -21,7 +44,7 @@ local function onMessage(m)
 	local match = false
 	local word = ""
 	local ref = ""
-	for _,v in pairs(reactions) do
+	for _,v in sortedKeys(reactions) do
 		if not string.match(m.content:lower(),"%f[%a]"..v.word.."%f[%A]") then goto continue end
 		local max = #reactDat[v.ref].reactions
 		local r = reactDat[v.ref].reactions[math.random(max)]
