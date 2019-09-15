@@ -13,8 +13,8 @@ triggers["what ain'?t no country i'?ve ever heard of.? they speak english in wha
 triggers["english mother ?fucker do you speak it[!?]?[!?]?"] = "yes! yes!"
 triggers["then you know what i'?m sayin'?%??"] = "yes!"
 triggers["describe what marsellus wallace looks like"] = "what"
-triggers["say what again[!.]? say what again i dare you i double dare you mother ?fucker say what one more goddamn time!?"] = "hes black"
-triggers["go on!?"] = "hes bald"
+triggers["say what again[!.]? say what again i dare you i double dare you mother ?fucker say what one more goddamn time!?"] = "he's black"
+triggers["go on!?"] = "he's bald"
 triggers["does he look like a bitch[!?]?[!?]?"] = "what?! **gunshot**"
 
 
